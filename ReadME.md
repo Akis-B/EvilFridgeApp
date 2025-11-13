@@ -6,8 +6,6 @@ A web-based application that uses AI to analyze fridge images and list all items
 - Upload images via click or drag-and-drop
 - Real-time image preview
 - AI-powered item detection using Qwen2-VL-7B model
-- Clean, modern user interface
-- Mobile-friendly responsive design
 
 ## Prerequisites
 - Python 3.8 or higher
