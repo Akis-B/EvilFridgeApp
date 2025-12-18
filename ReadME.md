@@ -1,6 +1,6 @@
-# Evil Fridge (Local Qwen Vision)
+# Evil Fridge 
 
-Upload a photo of your fridge, have a local vision model list everything it sees, then let an evil “fridge” spin a wheel to generate chaotic recipes or schemes. Everything runs locally—no OpenAI API required.
+Upload a photo of your fridge, have a local vision model list everything it sees, then let an evil “fridge” spin a wheel to generate chaotic recipes or schemes. Everything runs locally.
 
 ## What’s inside
 - Flask backend (`App.py`) serving the UI at `/`
