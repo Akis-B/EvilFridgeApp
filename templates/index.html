@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evil Fridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <div class="scene">
+        <div class="fridge" aria-hidden="true">
+            <div class="fridge-glow"></div>
+            <div class="fridge-handle"></div>
+            <div class="face">
+                <div class="eyes">
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+                </div>
+                <div class="smile"></div>
+            </div>
+        </div>
+
+        <div class="welcome" id="welcomeScreen">
+            <p class="eyebrow">Evil Fridge</p>
+            <h1>Welcome to the Evil Fridge app!</h1>
+            <p class="tagline">see what it has in store for you</p>
+            <button class="play-btn" id="playBtn">Play ▶</button>
+        </div>
+
+        <div class="card" id="appShell">
+            <div class="card-header">
+                <h2>Fridge Item Analyzer</h2>
+                <p>Upload a photo of your fridge and let the app reveal its secrets.</p>
+            </div>
+
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📸</div>
+                <p>Click to upload or drag and drop</p>
+                <p style="font-size: 14px; color: rgba(255, 255, 255, 0.55); margin-top: 5px;">PNG, JPG up to 16MB</p>
+            </div>
+
+            <input type="file" id="fileInput" accept="image/*">
+
+            <div class="preview-container" id="previewContainer" style="display: none;">
+                <img id="previewImage" class="preview-image" alt="Preview">
+            </div>
+
+            <button class="button" id="analyzeBtn" disabled>Analyze Image</button>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Analyzing your image... This may take a moment.</p>
+            </div>
+
+            <div class="error" id="error"></div>
+
+            <div class="results" id="results">
+                <div class="items-detected" id="itemsDetected"></div>
+                <h2>The fridge is plotting. Spin the wheel.</h2>
+                <div class="wheel-wrap" id="wheelWrap">
+                    <div class="wheel-panel">
+                        <div class="wheel-container">
+                            <div class="pointer"></div>
+                            <div id="wheel" class="wheel">
+                                <div class="label label-1">Environmental<br>Destruction</div>
+                                <div class="label label-2">General<br>Chaos</div>
+                                <div class="label label-3">Mischief<br>Engineering</div>
+                            </div>
+                        </div>
+                        <div style="width: 100%;">
+                            <button class="button spin-btn" id="spinBtn">Spin</button>
+                            <div class="badge" id="outcomeBadge">Awaiting spin...</div>
+                            <div class="wheel-text" id="wheelText"></div>
+                            <div class="loading" id="wheelLoading">
+                                <div class="spinner"></div>
+                                <p>Consulting the evil fridge...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script defer src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
